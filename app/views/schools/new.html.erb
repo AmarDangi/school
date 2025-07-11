@@ -1,0 +1,19 @@
+<html>
+<head>
+<style>
+button, select {
+    text-transform: none;
+    border: 1px solid white;
+}
+</style>
+</head>
+<h1 class="text-center"> Add New School</h1>
+<br/>
+<%= render "form", school: @school %>
+<br/>
+<div>
+<div class="text-center">
+  <button type="Back" ><%= link_to 'Back', school_directors_path, class: "btn btn-dark"%></button>
+  </div>
+</div>
+</html>

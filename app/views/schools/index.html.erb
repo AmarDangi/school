@@ -1,0 +1,98 @@
+
+<html>
+<style>
+/* table, th, td {
+  border:1px solid black;
+}
+table, th{
+    padding:1.75rem;
+}
+/* [type=submit], button {
+    
+    border:'1px solid white';
+} */
+
+
+button, select {
+    text-transform: none;
+    border: 1px solid #105469;
+    background-color:#105469;
+} 
+body {
+  background: #105469;
+  font-family: 'Open Sans', sans-serif;
+}
+table {
+  background: #012B39;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  margin: 1em;
+}
+th {
+  border-bottom: 1px solid #364043;
+  color: #E2B842;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+td {
+  color: #fff;
+  font-weight: 400;
+  padding: 0.65em 1em;
+}
+.disabled td {
+  color: #4F5F64;
+}
+tbody tr {
+  transition: background 0.25s ease;
+}
+tbody tr:hover {
+  background-color: #014055 !important;
+}
+</style>
+<body>
+<div>
+
+<h2  style='text-align:center;background-color:gray;'>SCHOOL TABLE</h2>
+<table style="width:50%;margin-left: 468px; "   class='table table-striped'>
+<thead>
+  <tr >
+    <th>Id</th>
+    <th>School_uniq_id</th>
+    <th>School_name</th>
+    <th>Approve_by_gov</th>
+    <th>City</th>
+    <th>school_director_id</th>
+    <th colspan="3">Action</th>
+   
+  </tr>
+  </thead>
+  <% @schools.each do |school|  %>
+<tbody>
+  <tr>
+    <td> <%= school.id %></td>
+    <td> <%= school.school_uniq_id %></td>
+    <td> <%= school.school_name %></td>
+    <td> <%= school.approve_by_gov %></td>
+    <td> <%= school.city %></td>
+    <td> <%= school.school_director_id %></td>
+    <td> <%= link_to "View", "school_directors_school.school_director_id", :method => :get %></td>
+    <td> <%= link_to "Edit" %></td>  
+    <td> <%= link_to "delete" %></td>  
+  </tr>
+  </tbody>
+  <%end%> 
+
+</table>
+  <%# <%= link_to 'Create',  new_school_director_path, class:"btn btn-success" %>
+  <div class="text-center">
+  <%# <button type="submit"> <%= link_to 'Create',  new_school_director_path, class:"btn btn-success" %></button> 
+  <button type="Back" ><%= link_to 'Back', school_directors_path, class: "btn btn-dark"%></button>
+
+  </div>
+</body>
+</div>
+</html> 
+
+

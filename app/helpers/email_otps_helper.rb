@@ -1,0 +1,2 @@
+module EmailOtpsHelper
+end

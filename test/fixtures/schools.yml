@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  school_uniq_id: MyString
+  school_name: MyString
+  approve_by_gov: false
+  city: MyString
+
+two:
+  school_uniq_id: MyString
+  school_name: MyString
+  approve_by_gov: false
+  city: MyString

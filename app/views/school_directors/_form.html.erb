@@ -1,0 +1,56 @@
+
+<%= form_with(model: school_director) do |form| %>
+  <% if school_director.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(school_director.errors.count, "error") %> prohibited this school_director from being saved:</h2>
+
+      <ul>
+        <% school_director.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class='container' >
+  <div  class="field form-group" >
+    
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, class:"form-control", placeholder:"First Name"%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, class:"form-control", placeholder:"Last Name"%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class:"form-control", placeholder:"Email" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :mobile_no%>
+    <%= form.text_field :mobile_no, class:"form-control", placeholder:"mobile_no" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :location %>
+    <%= form.text_field :location, class:"form-control", placeholder:"location" %>
+  </div>
+
+   <div class="field form-group">
+    <%= form.label :about %>
+    <%= form.text_field :about, class:"form-control", placeholder:"about" %>
+  </div>
+
+ <div class="form-group"> 
+    <%= form.label :image %><br />
+    <%= form.file_field :image, :class => 'fileupload' %>
+       </div>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-success" %>
+  </div>
+</div>
+<% end %>
+

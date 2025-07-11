@@ -1,0 +1,23 @@
+<html>
+<head>
+<style>
+button, select {
+    text-transform: none;
+    border: 1px solid white;
+   border: none;
+  background-color: #105469;
+}
+</style>
+</head>
+<h1 class="text-center"   style='background-color:gray;'> Add Teacher</h1>
+<br/>
+
+<%= render "form", teacher: @teacher %>
+<br/>
+<div>
+<%# <%= link_to 'Back', school_directors_path, class: "btn btn-dark"%> %>
+<div class="text-center">
+  <button type="Back" ><%= link_to 'Back', school_directors_path, class: "btn btn-dark"%></button>
+  </div>
+</div>
+</html>
