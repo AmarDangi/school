@@ -16,7 +16,7 @@ class EmailOtpsController < ApplicationController
           flash[:alert] = 'OTP has been expired'
         end
       else
-          flash[:alert] = 'OTP does not match'
+          flash[:alert] = 'OTP does not match enter correct OTP'
       end
     else
       #  flash[:alert] = 'OTP not found'
